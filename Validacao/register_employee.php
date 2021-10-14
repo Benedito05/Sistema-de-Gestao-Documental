@@ -75,7 +75,8 @@ else{
            //$msg[] = "<b>$name : </b> Upload Realizado com Sucesso";
      
             $query = mysqli_query($conecta, "INSERT INTO usuario (first_name, last_name, genre, email, password, id_funcao, Nivel_Acesso, id_departamento, foto) VALUES ('$first_name', '$last_name', '$genre', '$email', '$password', '$funcao', '$Nivel_Acesso', '$departament', '$file'.$i)");
-
+var_dump($query);
+die();
              $sql = 'INSERT INTO usuario (first_name, last_name, genre,email,password,id_funcao, Nivel_Acesso, id_departamento, foto)';
             $sql.= 'VALUES (:first_name, :last_name, :genre, :email, :password, :id_funcao, :Nivel_Acesso, :id_departamento, :foto)';
         
@@ -94,10 +95,10 @@ else{
                 
                 
                 if ($create->execute()) {
-                     echo "<script>alert('orador cadastrado com sucesso!.');</script>";  
+                     echo "<script>alert('Funcionario cadastrado com sucesso!.');</script>";  
                 }
                 else{
-                    echo "<script>alert('Ocorreu um erro ao cadastrar noticia imaterial! Tente dentro de alguns segundos.');</script>";
+                    echo "<script>alert('Ocorreu um erro ao cadastrar funcionario imaterial! Tente dentro de alguns segundos.');</script>";
                 }
             } catch (PDOException $e) {
                         echo $e->getMessage();

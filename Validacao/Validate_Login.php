@@ -24,6 +24,7 @@ if (empty($resultado)) {
     header("Refresh:0, ../login.php");
 } else {
     
+   
   
     //Define os valores atribuidos na sessao do usuario
     $_SESSION['UserId'] = $resultado['id'];
@@ -39,8 +40,9 @@ if (empty($resultado)) {
     <strong style="text-align: center">Logado com êxito! Redireccionando ao sistema...</strong> 
  </div>'
  ;
+
     header("Refresh:0, ../index.php");
 
-
+ 
 }
 ?>

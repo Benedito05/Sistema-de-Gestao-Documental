@@ -326,10 +326,14 @@
                                     $resultado = mysqli_query($conecta, $busca);
                                     while ($row_cat = mysqli_fetch_assoc($resultado)) {
                                         echo '<option value="' . $row_cat['id'] . '">' . $row_cat['name'] . '</option>';
+                                 
+
                                     }
+
+                                 
                                     ?>
 
-
+                                    
                                 </select>
 
                                 <!-- <i class="fa fa-level-up"></i> -->
